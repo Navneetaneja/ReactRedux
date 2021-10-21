@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import Counter from './Components/Counter';
 import './index.css';
+import store from './Components/CounterStore';
 import reportWebVitals from './reportWebVitals';
-import Star from './star';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Star />
+    <Provider store={store}>
+      <Counter/>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
